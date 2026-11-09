@@ -280,17 +280,14 @@ on:
         options:
           - ophub/fnnas
       fnnas_kernel:
-        description: "Select fnnas kernel version"
+        description: "Set fnnas kernel version (exact version, e.g. 6.12.41)"
         required: false
-        default: "6.18.y"
-        type: choice
-        options:
-          - 6.18.y
-          - 6.12.y
+        default: "6.12.41"
+        type: string
       auto_kernel:
         description: "Auto use the latest kernel"
         required: false
-        default: true
+        default: false
         type: boolean
       fnnas_size:
         description: "Set boot/rootfs size(MiB)"

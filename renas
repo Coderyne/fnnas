@@ -511,6 +511,7 @@ query_kernel() {
                 if [[ -n "${latest_version}" ]]; then
                     tmp_arr_kernels[${i}]="${latest_version}"
                 else
+                    echo -e " ${WARNING} Failed to query the latest [ ${key} ] kernel, fallback to [ ${kernel_var} ]."
                     tmp_arr_kernels[${i}]="${kernel_var}"
                 fi
 
